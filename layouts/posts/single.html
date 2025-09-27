@@ -4,7 +4,7 @@
 
 
   <!-- 文章封面 -->
-  {{- if .Params.cover -}}
+  {{- if and .Params.cover .Params.showCoverInPost -}}
     {{/* 使用通用图片处理器 */}}
     {{- partial "content/image-processor.html" (dict
       "context" .
